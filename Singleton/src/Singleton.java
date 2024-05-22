@@ -8,7 +8,11 @@ public class Singleton {
 
     public static Singleton getSingleton(int data){
         if(singleton==null){
-            singleton=new Singleton(data);
+            synchronized(Singleton.class){
+                if(singleton==null){
+                    singleton=new Singleton(data);
+                }
+            }
         }
         else{
             singleton=null;
