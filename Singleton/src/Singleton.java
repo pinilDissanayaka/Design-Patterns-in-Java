@@ -1,7 +1,8 @@
 public class Singleton {
     private int data;
     private static Singleton singleton;
-
+    
+    
     private Singleton(int data){
         this.data=data;
     }
